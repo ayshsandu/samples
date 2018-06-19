@@ -49,6 +49,7 @@ cp $IS_HOME/lib/runtimes/cxf/javax.ws.rs-api-2.0-m10.jar $WEB_APP_LIB
 cp $IS_HOME/lib/runtimes/cxf/cxf-bundle-2.7.16.wso2v1.jar $WEB_APP_LIB
 cp $IS_HOME/lib/runtimes/cxf/neethi-3.0.3.jar $WEB_APP_LIB
 cp $IS_HOME/lib/runtimes/cxf/wsdl4j-1.6.3.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/commons-collections_3.2.2.wso2v1.jar $WEB_APP_LIB
 
 rm -rf ${WEB_APP_HOME}/authenticationendpoint.war
 
