@@ -33,27 +33,46 @@ unzip ${WEB_APP_HOME}/accountrecoveryendpoint.war -d ${WEB_APP_HOME}/accountreco
 
 rm ${WEB_APP_HOME}/accountrecoveryendpoint.war
 
-cp $IS_HOME/repository/components/plugins/org.wso2.carbon.base_4.4.11.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/org.wso2.carbon.identity.base_5.7.5.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/org.wso2.carbon.ui_4.4.11.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/org.wso2.carbon.identity.application.authentication.endpoint.util_5.7.5.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/org.wso2.carbon.identity.core_5.7.5.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/org.wso2.carbon.identity.user.registration.stub_5.7.5.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/org.wso2.carbon.utils_4.4.11.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/org.wso2.carbon.user.core_4.4.11.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/org.wso2.carbon.user.api_4.4.11.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/org.wso2.carbon.logging_4.4.11.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/commons-lang_2.6.0.wso2v1.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/encoder_1.2.0.wso2v1.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/com.google.gson_2.8.5.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/httpclient_4.3.6.wso2v2.jar $WEB_APP_LIB
 cp $IS_HOME/repository/components/plugins/httpcore_4.3.3.wso2v1.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/axis2_1.6.1.wso2v20.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/opensaml_2.6.4.wso2v3.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/json_3.0.0.wso2v1.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.identity.mgt.stub_5.12.332.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.identity.user.registration.stub_5.12.332.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.base_4.4.38.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.identity.base_5.12.332.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.ui_4.4.38.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.identity.application.authentication.endpoint.util_5.12.332.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.identity.core_5.12.332.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.utils_4.4.38.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.user.core_4.4.38.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.user.api_4.4.38.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.logging_4.4.38.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/axis2_1.6.1.wso2v34.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/opensaml_2.6.4.wso2v5.jar $WEB_APP_LIB
 cp $IS_HOME/repository/components/plugins/jettison_1.3.4.wso2v1.jar $WEB_APP_LIB
-cp $IS_HOME/lib/runtimes/cxf/javax.ws.rs-api-2.0-m10.jar $WEB_APP_LIB
-cp $IS_HOME/lib/runtimes/cxf/cxf-bundle-2.7.16.wso2v1.jar $WEB_APP_LIB
-cp $IS_HOME/lib/runtimes/cxf/neethi-3.0.3.jar $WEB_APP_LIB
-cp $IS_HOME/lib/runtimes/cxf/wsdl4j-1.6.3.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/commons-codec_1.4.0.wso2v1.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/neethi_2.0.4.wso2v5.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/wsdl4j_1.6.2.wso2v4.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.apache.commons.commons-codec_1.12.0.jar $WEB_APP_LIB
 cp $IS_HOME/repository/components/plugins/commons-collections_3.2.2.wso2v1.jar $WEB_APP_LIB
-cp $IS_HOME/repository/components/plugins/axiom_1.2.11.wso2v11.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.identity.mgt_5.12.332.jar $WEB_APP_LIB
+cp $IS_HOME/repository/components/plugins/org.wso2.carbon.tomcat.ext_4.4.38.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/javax.ws.rs-api-2.1.1.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/cxf-core-3.2.8.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/cxf-rt-frontend-jaxrs-3.2.8.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/cxf-rt-rs-client-3.2.8.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/cxf-rt-rs-extension-providers-3.2.8.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/cxf-rt-rs-extension-search-3.2.8.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/cxf-rt-rs-service-description-3.2.8.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/cxf-rt-transports-http-3.2.8.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/jackson-annotations-2.9.7.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/jackson-core-2.9.7.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/jackson-databind-2.9.7.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/jackson-jaxrs-base-2.9.7.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/jackson-jaxrs-json-provider-2.9.7.jar $WEB_APP_LIB
+cp $IS_HOME/lib/runtimes/cxf3/jackson-module-jaxb-annotations-2.9.7.jar $WEB_APP_LIB
 
 echo "===================================================================================="
 echo
