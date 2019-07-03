@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "097fd904-12c5-4bda-9682-cad9e6f5334f",
+		"name": "Challenge API - Server",
+		"description": "This is the RESTful API for managing Challenge Questions in WSO2 Identity Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "challenges",
+			"item": [
+				{
+					"name": "searches challenge-question",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:9443/api/server/v1/challenges?",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"api",
+								"server",
+								"v1",
+								"challenges"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "{{locale}}",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "{{offset}}",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}",
+									"disabled": true
+								}
+							]
+						},
+						"description": "By passing in the appropriate options, you can search for\navailable challenge-question in the system\n"
+					},
+					"response": []
+				},
+				{
+					"name": "adds a new challenge question",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"questionSetId\": \"challengeQuestion6\",\n    \"questions\": [\n      {\n        \"locale\": \"en_US\",\n        \"question\": \"What is your favorite travel destination ?\",\n        \"questionId\": \"question1\"\n      }\n    ]\n  }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:9443/api/server/v1/challenges",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"api",
+								"server",
+								"v1",
+								"challenges"
+							]
+						},
+						"description": "Adds a new challenge question to the system\n"
+					},
+					"response": []
+				},
+				{
+					"name": "searches challenge-question",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:9443/api/server/v1/challenges/challengeQuestion6?locale=en_US",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"api",
+								"server",
+								"v1",
+								"challenges",
+								"challengeQuestion6"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "en_US"
+								}
+							]
+						},
+						"description": "By passing in the appropriate options, you can search for\navailable challenge-question in the system\n"
+					},
+					"response": []
+				},
+				{
+					"name": "update challenge question",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n      {\n        \"locale\": \"en_US\",\n        \"question\": \"What is your favorite travel destination ?\",\n        \"questionId\": \"question1\"\n      }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:9443/api/server/v1/challenges/challengeQuestion6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"api",
+								"server",
+								"v1",
+								"challenges",
+								"challengeQuestion6"
+							]
+						},
+						"description": "Updates an existing challenge question set in the system\n"
+					},
+					"response": []
+				},
+				{
+					"name": "update challenge question",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "challenge-question to update"
+						},
+						"url": {
+							"raw": "https://localhost:9443/api/server/v1/challenges/:challenge-set-id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"api",
+								"server",
+								"v1",
+								"challenges",
+								":challenge-set-id"
+							],
+							"variable": [
+								{
+									"key": "challenge-set-id",
+									"value": "{{challenge-set-id}}"
+								}
+							]
+						},
+						"description": "Add new challenge question for an existing set\n"
+					},
+					"response": []
+				},
+				{
+					"name": "removes a challenge question set",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://localhost:9443/api/server/v1/challenges/:challenge-set-id?locale={{locale}}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"api",
+								"server",
+								"v1",
+								"challenges",
+								":challenge-set-id"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "{{locale}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "challenge-set-id",
+									"value": "{{challenge-set-id}}"
+								}
+							]
+						},
+						"description": "Removes an existing challenge question set from the system. By specifying the locale query parameter, questions of specific locale can be deleted within the Set.\n"
+					},
+					"response": []
+				},
+				{
+					"name": "removes a challenge question",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://localhost:9443/api/server/v1/challenges/:challenge-set-id/questions/:question-id?locale={{locale}}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"api",
+								"server",
+								"v1",
+								"challenges",
+								":challenge-set-id",
+								"questions",
+								":question-id"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "{{locale}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "question-id",
+									"value": "{{question-id}}"
+								},
+								{
+									"key": "challenge-set-id",
+									"value": "{{challenge-set-id}}"
+								}
+							]
+						},
+						"description": "Removes an existing challenge question set from the system. By specifying the locale query parameter, locale specific entry for the question can be deleted.\n"
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for challenges"
+		}
+	]
+}
